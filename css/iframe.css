@@ -1,0 +1,63 @@
+/* iframe.css - styles for responsive, accessible iframe showing external blog */
+.blog-iframe-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  /* use aspect-ratio where supported for responsive height */
+  aspect-ratio: 16 / 9;
+  background: var(--color-fondo);
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.blog-iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Para navegadores que no soportan aspect-radio */
+@supports not (aspect-ratio: 16/9) {
+  .blog-iframe-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 ratio */
+    height: auto;
+  }
+  .blog-iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Small screens: taller iframe */
+@media (max-width: 600px) {
+  .blog-iframe-wrapper { aspect-ratio: 4 / 3; padding-top: 75%; }
+}
+
+/* Accesibilidad: focus visible para teclado */
+.blog-iframe-wrapper iframe:focus {
+  outline: 3px solid #2b7cff;
+  outline-offset: 3px;
+}
+
+/* Ensure high contrast for link to open blog separately */
+.open-blog-link {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  transition: 0.3s ease;
+}
+.open-blog-link:hover,
+.open-blog-link:focus {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+}

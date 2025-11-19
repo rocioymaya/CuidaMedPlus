@@ -1,0 +1,16 @@
+/* Texto grande para baja visión */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+/* big.css — texto grande y legible */
+:root{
+  --font-size-base: 125%;
+  --line-height-base: 1.6;
+}
+
+/* Aumentar la base tipográfica; base.css debe usar var(--font-size-base) si es posible */
+html { font-size: var(--font-size-base) !important; }
+body { line-height: var(--line-height-base) !important; font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important; }
+
+/* Ajustes puntuales para lectura */
+p, li { font-size: 1.125rem !important; }
+

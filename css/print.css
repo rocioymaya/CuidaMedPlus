@@ -1,0 +1,16 @@
+/* print.css — versión para impresión */
+@page { size: A4; margin: 20mm; }
+
+html, body {
+  background: #fff !important;
+  color: #000 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 12pt !important;
+  line-height: 1.45 !important;
+}
+
+header, nav, footer, aside, .sidebar, .no-print { display: none !important; }
+img { max-width: 100% !important; height: auto !important; page-break-inside: avoid; }
+a[href]:after { content: " (" attr(href) ")"; font-size: 10pt; color: #444; }
+table { page-break-inside: avoid; border-collapse: collapse; }
+h1, h2, h3 { page-break-after: avoid; }

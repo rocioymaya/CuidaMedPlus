@@ -1,0 +1,22 @@
+/* Alto contraste + Texto grande */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+/* contrast-big.css — alto contraste + texto grande combinados */
+:root{
+  --color-primario: #000000;
+  --color-fondo: #000000;
+  --color-texto: #148c26;
+  --color-enlace: #56f06d;
+  --color-acento: #56f06d;
+  --color-detalle: #2d2c2e;
+  --color-borde: #f2f5f1;
+  --color-fondo-caja: #000000;
+  --color-blanco: #000000;
+  --font-size-base: 135%;
+  --line-height-base: 1.7;
+}
+
+html { font-size: var(--font-size-base) !important; }
+body { line-height: var(--line-height-base) !important; font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important; }
+a { color: var(--color-enlace) !important; font-weight: 700 !important; text-decoration: underline !important; }
+:focus { outline: 4px dashed var(--color-enlace) !important; outline-offset: 3px; }
+

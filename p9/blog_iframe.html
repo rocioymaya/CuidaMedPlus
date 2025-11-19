@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Página con Blog (Práctica 9) - de CuidaMed+</title>
+
+  <!-- Estilos alternativos añadidos para la práctica -->
+<link rel="stylesheet" href="../css/base.css" title="Predeterminado" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="alternate stylesheet" type="text/css" href="../css/night.css" title="Modo noche" />
+<link rel="alternate stylesheet" type="text/css" href="../css/contrast.css" title="Alto contraste" />
+<link rel="alternate stylesheet" type="text/css" href="../css/big.css" title="Texto grande" />
+<link rel="alternate stylesheet" type="text/css" href="../css/contrast-big.css" title="Alto contraste y texto grande" />
+<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
+</head>
+<body>
+  <header>
+    <h1>Blog de CuidaMed+</h1>
+    <p>En esta página se inserta el blog creado en WordPress mediante un &lt;iframe&gt; accesible y adaptativo. A continuación
+        se muestra una vista previa de este. En caso de que no cargue el visor, encontraréis un enlace para abrir el blog en un apágina distinta.
+    </p>
+  </header>
+
+  <main>
+    <!--
+      INSTRUCCIONES:
+      - Sustituye la constante BLOG_URL en el script por la URL de tu blog en WordPress.com
+        (ejemplo: "https://mibloggratuito.wordpress.com").
+    -->
+    <div class="blog-iframe-wrapper" role="region" aria-label="Vista previa del blog">
+      <iframe
+        src=""
+        id="blogIframe"
+        title="Visor del blog - permite navegar por el blog creado en WordPress"
+        loading="lazy"
+        sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox"
+        aria-describedby="blog-note">
+      </iframe>
+    </div>
+
+    <p id="blog-note">Si el visor no carga, abre el blog en una nueva pestaña usando el enlace siguiente.</p>
+    <p>
+      <a class="open-blog-link" id="openBlog" href="#" target="_blank" rel="noopener noreferrer">-> Abrir el blog en una pestaña nueva </a>
+    </p>
+
+
+  </main>
+
+  <script>
+    // -----------------------
+    // Aquí insertamos la url de nuestro blog
+    const BLOG_URL = "https://mayabeesetor-fybdh.wordpress.com";
+    // -----------------------
+
+    const iframe = document.getElementById('blogIframe');
+    const openLink = document.getElementById('openBlog');
+
+    if (BLOG_URL && BLOG_URL.trim() !== "") {
+      iframe.src = BLOG_URL;
+      openLink.href = BLOG_URL;
+      openLink.setAttribute('aria-label', 'Abrir el blog en una pestaña nueva: ' + BLOG_URL);
+    } else {
+      iframe.removeAttribute('src');
+      openLink.href = "#";
+      openLink.addEventListener('click', function(e){
+        e.preventDefault();
+        alert('Por favor, edita blog_iframe.html y configura la constante BLOG_URL con la URL de tu blog en WordPress.com.');
+      });
+    }
+
+    // Detecta si el contenido del iframe está bloqueado por X-Frame-Options
+    iframe.addEventListener('load', function() {
+      try {
+        // Si el iframe es cross-origin y la cabecera bloquea, esto lanzará excepción
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+      } catch (err) {
+        const note = document.getElementById('blog-note');
+        note.textContent = 'Si el blog no se puede mostrar dentro del iframe, usa este enlace para abrirlo directamente.';
+      }
+    });
+  </script>
+
+  <footer>
+    <p>Proyecto: Práctica 9 - Usabilidad y Accesibilidad</p>
+  </footer>
+</body>
+</html>

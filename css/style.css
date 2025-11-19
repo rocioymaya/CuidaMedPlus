@@ -1,0 +1,24 @@
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #4cb355;
+  border: 2px solid #4cb355;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background: #4cb355;
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.12);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #4cb355;
+  outline-offset: 3px;
+}

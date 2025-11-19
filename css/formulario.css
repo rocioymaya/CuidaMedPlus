@@ -1,0 +1,74 @@
+@import url('base.css');
+
+/* formularios.css - estilos para todos los formularios (incluye p2) */
+
+/* === Estilo general de los formularios === */
+form {
+  background-color: var(--color-blanco);
+  border-radius: 12px;
+  border: 1px solid var(--color-gris);
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-secundario);
+}
+
+/* Inputs, selects y textareas */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-gris);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-family: inherit;
+  background-color: var(--color-fondo);
+  box-sizing: border-box;
+}
+
+/* Ajuste al enfocar */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 4px var(--color-detalle);
+}
+
+/* Botones */
+button, input[type="submit"] {
+  margin-top: 10px;
+}
+
+/* Estilo de respuesta */
+.respuesta {
+  background-color: var(--color-primario);
+  border: 1px solid var(--color-detalle);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: var(--color-texto);
+}
+
+/* === Ajuste específico para checkbox y radio === */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;            /* no ocupar todo el ancho */
+  display: inline-block;  /* alineado con el label */
+  margin-right: 8px;      /* espacio entre input y texto */
+  vertical-align: middle; /* centra el texto con el input */
+}
+
+/* Opcional: labels de checkbox/radio al lado del input */
+label.inline {
+  display: inline-block; /* si quieres usar label en la misma línea */
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,29 @@
+/* contrast.css — alto contraste (colores fuertes) */
+:root{
+  --color-primario: #000000;
+  --color-fondo: #000000;
+  --color-texto: #148c26;
+  --color-enlace: #56f06d;
+  --color-acento: #56f06d;
+  --color-borde: #f2f5f1;
+  --color-detalle: #2d2c2e;
+  --color-fondo-caja: #000000;
+  --color-blanco: #000000;
+}
+
+/* Forzar contraste a través de variables (base.css debe usar var(...)) */
+html, body { background-color: var(--color-fondo) !important; color: var(--color-texto) !important; }
+a { color: var(--color-enlace) !important; text-decoration: underline !important; font-weight: 700 !important; }
+.intro, .highlight, .info, .box, blockquote {
+  background-color: var(--color-fondo-caja) !important;
+  color: var(--color-texto) !important;
+  border-left: 4px solid var(--color-acento) !important;
+  padding: 0.6em 1em;
+}
+
+/* Formularios y tablas muy contrastadas */
+input, select, textarea, button { background-color: var(--color-fondo-caja) !important; color: var(--color-texto) !important; border: 2px solid var(--color-borde) !important; }
+table, th, td { border-color: var(--color-borde) !important; color: var(--color-texto) !important; }
+
+/* Foco muy visible */
+:focus { outline: 4px dashed var(--color-enlace) !important; outline-offset: 3px; }

@@ -1,0 +1,256 @@
+@import url('base.css');
+
+/* === ESTRUCTURA GENERAL === */
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Columna izquierda más ancha, derecha más estrecha */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 20px auto; /* reducido para eliminar hueco extra */
+  padding: 0 20px;
+  position: relative; /* Necesario para mantener proporciones al haber un nav posicionado dentro del header */
+}
+
+/* Ajustes del header para contener elementos posicionados dentro */
+header {
+  position: relative;    /* para que los elementos absolute dentro se posicionen respecto a header */
+  min-height: 220px;     /* suficiente para que la tabla y el título coexistan sin crear huecos enormes */
+  padding-top: 20px;
+}
+
+/* === TABLA DE CONTENIDOS (POSICIONADA DENTRO DEL HEADER, NO FIXED/NO STICKY) === */
+header nav[aria-label="Tabla de contenidos"] {
+  position: absolute;               /* se queda en su sitio dentro del header (no se mueve con el scroll) */
+  top: 40px;                        /* distancia desde el borde superior del header */
+  left: 20px;                       /* distancia desde el borde izquierdo del header */
+  z-index: 1000;
+  width: 260px;                     /* ancho fijo */
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-gris);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  max-height: 90vh;                 /* si hay mucho contenido, permite desplazamiento interno */
+  text-align: center;
+}
+
+/* Título de la tabla */
+header nav[aria-label="Tabla de contenidos"] h2 {
+  font-size: 1.2rem;
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Lista numerada alineada a la izquierda */
+header nav[aria-label="Tabla de contenidos"] ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+/* Enlaces dentro de la lista */
+header nav[aria-label="Tabla de contenidos"] li {
+  margin: 6px 0;
+}
+
+header nav[aria-label="Tabla de contenidos"] a {
+  font-weight: 600;
+  color: var(--color-secundario);
+  text-decoration: none;
+}
+
+header nav[aria-label="Tabla de contenidos"] a:hover {
+  color: var(--color-texto);
+  text-decoration: underline;
+}
+
+/* === INTRODUCCIÓN DENTRO DE LA TABLA === */
+header nav[aria-label="Tabla de contenidos"] .introduccion {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid var(--color-detalle);
+  text-align: left;
+}
+
+header nav[aria-label="Tabla de contenidos"] .introduccion h3 {
+  color: var(--color-secundario);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+header nav[aria-label="Tabla de contenidos"] .introduccion p {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  line-height: 1.4;
+}
+
+/* === BIENVENIDO === */
+section.bienvenida {
+  padding: 20px 40px;
+  margin: 0 auto;        /* centra horizontalmente y elimina el gran margen vertical */
+  margin-top: 60px;      /* ajusta la distancia con respecto al top del header */
+  max-width: 600px;      /* más ancho para apariencia centrada */
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-gris);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--color-secundario);
+}
+
+section.bienvenida span {
+  color: var(--color-detalle);
+  font-weight: 700;
+}
+
+/* === ÍNDICE DE LETRAS (A–Z) === */
+.indice-letras {
+  position: relative;
+  top: 0;
+  text-align: center;
+  background-color: var(--color-detalle);
+  border-radius: 12px;
+  padding: 15px 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--color-secundario);
+  width: 100%;
+  margin: 0 auto 40px auto;
+}
+
+.indice-letras a {
+  margin: 0 6px;
+  color: var(--color-secundario);
+  font-weight: 700;
+}
+
+.indice-letras a:hover {
+  color: var(--color-texto);
+  text-decoration: underline;
+}
+
+/* === TEMA PRINCIPAL === */
+#tema_principal {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-gris);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#tema_principal h2 {
+  font-size: 2rem;
+  color: var(--color-secundario);
+  border-bottom: 3px solid var(--color-detalle);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#tema_principal h3 a {
+  color: var(--color-secundario);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#tema_principal img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+#tema_principal em {
+  display: block;
+  font-style: italic;
+  color: var(--color-texto);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* === BLOQUE DEL LIBRO === */
+blockquote {
+  background-color: var(--color-detalle);
+  border-left: 5px solid var(--color-secundario);
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 700px;
+  font-style: italic;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--color-secundario);
+}
+
+/* === ASIDE (OTROS TEMAS) === */
+aside {
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-gris);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  font-size: 0.9rem;
+}
+
+aside h2 {
+  font-size: 1.3rem;
+  color: var(--color-secundario);
+  border-bottom: 2px solid var(--color-detalle);
+  padding-bottom: 8px;
+}
+
+aside ul {
+  list-style: disc inside;
+  color: var(--color-texto);
+}
+
+/* === RESPONSIVIDAD === */
+@media (max-width: 900px) {
+  header {
+    min-height: auto;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    margin-left: 0;
+    margin: 20px auto;
+  }
+
+  /* En móviles, la tabla pasa al flujo normal encima del contenido */
+  header nav[aria-label="Tabla de contenidos"] {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+    transform: none;
+    max-height: none;
+  }
+
+  section.bienvenida {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  #tema_principal {
+    padding: 25px;
+  }
+
+  .indice-letras {
+    font-size: 1rem;
+  }
+}

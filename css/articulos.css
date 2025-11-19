@@ -1,0 +1,21 @@
+@import url('base.css');
+
+/* articulos.css */
+article {
+  background-color: var(--color-blanco);
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid var(--color-gris);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+}
+
+article h2 {
+  color: var(--color-secundario);
+}
+
+article p {
+  color: var(--color-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+}

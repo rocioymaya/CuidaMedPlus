@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css" >
+  <link rel="stylesheet" href="../../css/formulario.css" />
+  <title>CuidaMed+ | Buscador de artículos</title>
+
+<!-- Estilos alternativos añadidos para la práctica -->
+<link rel="stylesheet" href="css/base.css" title="Predeterminado" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/night.css" title="Modo noche" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/contrast.css" title="Alto contraste" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/big.css" title="Texto grande" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/contrast-big.css" title="Alto contraste y texto grande" />
+<link rel="stylesheet" type="text/css" href="../../css/print.css" media="print" />
+
+</head>
+
+<body>
+  <header>
+    <h1><a href="../../index.html">CuidaMed+</a></h1>
+    <h2>Buscador de artículos</h2>
+  </header>
+
+  <nav aria-label="migas de pan">
+    <p>Estás en: 
+      <a href="../../index.html">Inicio</a> > 
+      <strong>Buscador de artículos</strong>
+    </p>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <p><strong>Nota:</strong> Los campos marcados con * son obligatorios.</p>
+
+    <form action="buscador_respuesta.html" method="get">
+
+      <fieldset>
+        <legend>Datos principales</legend>
+        <label for="descripcion">Descripción*:</label>
+        <input type="text" id="descripcion" name="descripcion" required placeholder="Ej.: Dolor abdominal agudo">
+
+        <label for="causas">Causas:</label>
+        <input type="text" id="causas" name="causas" placeholder="Ej.: Infección viral">
+      </fieldset>
+
+      <fieldset>
+        <legend>Síntomas</legend>
+        <label for="sintomas">Seleccione uno o más síntomas:</label>
+        <select id="sintomas" name="sintomas[]" multiple>
+          <option value="fiebre">Fiebre</option>
+          <option value="vomito">Vómito</option>
+          <option value="diarrea">Diarrea</option>
+          <option value="dolor_muscular">Dolor muscular</option>
+          <option value="tos">Tos</option>
+          <option value="fatiga">Fatiga</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tratamiento</legend>
+        <label for="tratamiento">Tratamiento:</label>
+        <input type="text" id="tratamiento" name="tratamiento" placeholder="Ej.: Antibióticos de amplio espectro">
+      </fieldset>
+
+      <fieldset>
+        <legend>Expectativas</legend>
+        <label><input type="radio" name="expectativas" value="negativas"> Negativas</label>
+        <label><input type="radio" name="expectativas" value="sin_definir"> Sin definir</label>
+        <label><input type="radio" name="expectativas" value="positivas"> Positivas</label>
+      </fieldset>
+
+      <button type="submit">Buscar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Autores: Maya Beese Torres y Rocío Marcos Guzmán &copy; 2025</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@import url('base.css');
+
+/* letras.css - para índice de letras o secciones por inicial */
+.indice-letras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.indice-letras a {
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.indice-letras a:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+}

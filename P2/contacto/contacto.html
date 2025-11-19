@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css" >
+  <link rel="stylesheet" href="../../css/formulario.css" />
+  
+  <meta name="author" content="Maya Beese Torres y Rocío Marcos Guzmán">
+  <meta name="description" content="Formulario de contacto - CuidaMed+">
+  <title>CuidaMed+ | Formulario de contacto</title>
+
+<!-- Estilos alternativos añadidos para la práctica -->
+<link rel="stylesheet" href="css/base.css" title="Predeterminado" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/night.css" title="Modo noche" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/contrast.css" title="Alto contraste" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/big.css" title="Texto grande" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/contrast-big.css" title="Alto contraste y texto grande" />
+<link rel="stylesheet" type="text/css" href="../../css/print.css" media="print" />
+
+</head>
+<body>
+  <header>
+    <h1><a href="../../index.html">CuidaMed+</a></h1>
+    <h2>Formulario de contacto</h2>
+  </header>
+
+  <nav aria-label="migas de pan">
+    <p>Estás en: 
+      <a href="../../index.html">Inicio</a> > 
+      <strong>Formulario de contacto</strong>
+    </p>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <p><strong>Nota:</strong> Los campos marcados con * son obligatorios.</p>
+
+    <form action="contacto_respuesta.html" method="get">
+      <fieldset>
+        <legend>Mensaje</legend>
+
+        <label for="asunto">Asunto*:</label>
+        <input type="text" id="asunto" name="asunto" required placeholder="Ej.: Consulta sobre vacuna antigripal">
+
+        <label for="comentario">Comentario o pregunta*:</label>
+        <textarea id="comentario" name="comentario" rows="6" required placeholder="Ej.: Quisiera saber si la vacuna es recomendable para mayores de 65 años"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="yo-soy">Yo soy:</label>
+        <select id="yo-soy" name="yo_soy" required>
+          <option value="" disabled selected>Seleccione su perfil</option>
+          <option value="paciente">Paciente</option>
+          <option value="cientifico">Científico</option>
+          <option value="medico">Médico</option>
+          <option value="educador">Educador</option>
+          <option value="fabricante">Fabricante</option>
+          <option value="periodista">Periodista</option>
+        </select>
+
+        <label for="fecha-nac">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nac" name="fecha_nacimiento">
+
+        <fieldset class="sexo">
+          <legend>Sexo</legend>
+          <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
+          <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+          <label><input type="radio" name="sexo" value="otro"> Otro</label>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos de contacto</legend>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com">
+
+        <label><input type="checkbox" name="recibir_info" value="si"> Deseo recibir más información</label>
+      </fieldset>
+
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Autores: Maya Beese Torres y Rocío Marcos Guzmán &copy; 2025</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/base.css" >
+  <link rel="stylesheet" href="../../css/formulario.css">
+
+  <title>CuidaMed+ | Formulario de Hábitos Saludables</title>
+  <meta name="description" content="Formulario de hábitos saludables - CuidaMed+">
+
+<!-- Estilos alternativos añadidos para la práctica -->
+<link rel="stylesheet" href="css/base.css" title="Predeterminado" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/night.css" title="Modo noche" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/contrast.css" title="Alto contraste" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/big.css" title="Texto grande" />
+<link rel="alternate stylesheet" type="text/css" href="../../css/contrast-big.css" title="Alto contraste y texto grande" />
+<link rel="stylesheet" type="text/css" href="../../css/print.css" media="print" />
+
+</head>
+<body>
+  <header>
+    <h1><a href="../../index.html">CuidaMed+</a></h1>
+    <h2>Formulario de Hábitos Saludables</h2>
+  </header>
+
+  <nav aria-label="migas de pan">
+    <p>Estás en:
+      <a href="../../index.html">Inicio</a> >
+      <strong>Formulario sobre hábitos saludables</strong>
+    </p>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <p><strong>Nota:</strong> Los campos marcados con * son obligatorios.</p>
+
+    <form action="respuesta.html" method="post">
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="nombre">Nombre completo*:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Maya Beese Torres" required><br><br>
+
+        <label for="email">Correo electrónico*:</label><br>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required><br><br>
+
+        <label for="fecha">Fecha de nacimiento*:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <label for="edad">Edad*:</label><br>
+        <input type="number" id="edad" name="edad" min="1" max="120" required><br><br>
+
+        <label for="telefono">Teléfono de contacto*:</label><br>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="Ej: 612345678" required>
+        <small>Debe tener 9 dígitos sin espacios</small><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Hábitos y estilo de vida</legend>
+
+        <label for="peso">Peso (kg):</label><br>
+        <input type="number" id="peso" name="peso" min="20" max="250" step="0.1"><br><br>
+
+        <label for="actividad">Nivel de actividad física (1 = bajo, 10 = alto):</label><br>
+        <input type="range" id="actividad" name="actividad" min="1" max="10" step="1"
+               list="niveles" value="5" oninput="valorActividad.value = actividad.value">
+
+        <datalist id="niveles">
+          <option value="1" label="1"></option>
+          <option value="5" label="5"></option>
+          <option value="10" label="10"></option>
+        </datalist>
+
+        <output id="valorActividad">5</output><br><br>
+
+        <label for="color">Color favorito de frutas/verduras:</label><br>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="habitos">Describe brevemente tus hábitos alimenticios:</label><br>
+        <textarea id="habitos" name="habitos" rows="4" cols="50"
+                  placeholder="Ej: Como frutas todos los días, pocas verduras, etc."></textarea><br><br>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Reiniciar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Autores: Maya Beese Torres y Rocío Marcos Guzmán &copy; 2025</p>
+  </footer>
+</body>
+</html>

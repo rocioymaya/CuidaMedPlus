@@ -1,0 +1,49 @@
+/* night.css — redefine variables para modo noche */
+:root{
+  --color-fondo: #0f0f12;
+  --color-texto: #3a4db9;
+  --color-enlace: #8ab4ff;
+  --color-acento: #7fb4ff;
+  --color-borde: #2a3340;
+  --color-detalle: rgb(61, 66, 69);
+  --color-fondo-caja: #14171d;
+  --color-blanco: #14171d;
+}
+
+/* no redefinimos reglas: base.css usa las variables */
+html, body { background-color: var(--color-fondo) !important; color: var(--color-texto) !important; }
+
+/* superficies */
+header, footer, nav, aside, .sidebar, .site-header, .site-footer {
+  background-color: var(--color-fondo-caja) !important;
+  color: var(--color-texto) !important;
+}
+
+/* enlaces */
+a { color: var(--color-enlace) !important; text-decoration: underline !important; }
+a:hover, a:focus { color: var(--color-acento) !important; }
+
+/* cajas destacadas */
+.intro, .highlight, .info, .box, blockquote {
+  background-color: var(--color-fondo-caja) !important;
+  color: var(--color-texto) !important;
+  border-left: 3px solid var(--color-acento) !important;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+/* formularios y tablas */
+input, select, textarea, button {
+  background-color: var(--color-fondo-caja) !important;
+  color: var(--color-texto) !important;
+  border: 1px solid var(--color-borde) !important;
+}
+table { background-color: var(--color-fondo-caja) !important; color: var(--color-texto) !important; border-color: var(--color-borde) !important; }
+th { background-color: #181c22 !important; color: #ffffff !important; }
+td { border-top: 1px solid var(--color-borde) !important; }
+
+/* foco visible */
+:focus { outline: 3px solid var(--color-acento) !important; outline-offset: 2px; }
+
+/* eliminar sombras que reduzcan contraste */
+* { text-shadow: none !important; box-shadow: none !important; }
