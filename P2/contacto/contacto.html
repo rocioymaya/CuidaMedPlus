@@ -66,9 +66,14 @@
 
         <fieldset class="sexo">
           <legend>Sexo</legend>
-          <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
-          <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
-          <label><input type="radio" name="sexo" value="otro"> Otro</label>
+          <input type="radio" id="sexo-hombre" name="sexo" value="hombre"> 
+          <label for="sexo-hombre" class="inline">Hombre</label>
+
+          <input type="radio" id="sexo-mujer" name="sexo" value="mujer">
+          <label for="sexo-mujer" class="inline">Mujer</label>
+
+          <input type="radio" id="sexo-otro" name="sexo" value="otro"> 
+          <label for="sexo-otro" class="inline">Otro</label>
         </fieldset>
       </fieldset>
 
@@ -78,7 +83,9 @@
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com">
 
-        <label><input type="checkbox" name="recibir_info" value="si"> Deseo recibir más información</label>
+        <input type="checkbox" id="recibir-info" name="recibir_info" value="si"> 
+        <label for="recibir-info">Deseo recibir más información</label>
+
       </fieldset>
 
       <button type="submit">Enviar consulta</button>

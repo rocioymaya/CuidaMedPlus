@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (biblioteca de iconos accesibles) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Estilos alternativos para los distintos modos -->
+  <link rel="stylesheet" href="css/base.css" title="Predeterminado">
+  <link rel="alternate stylesheet" type="text/css" href="../css/night.css" title="Modo noche">
+  <link rel="alternate stylesheet" type="text/css" href="../css/contrast.css" title="Alto contraste">
+  <link rel="alternate stylesheet" type="text/css" href="../css/big.css" title="Texto grande">
+  <link rel="alternate stylesheet" type="text/css" href="../css/contrast-big.css" title="Alto contraste y texto grande">
+  <link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
+
+  <meta name="author" content="Maya Beese Torres y Rocío Marcos Guzmán">
+  <meta name="description" content="Accesibilidad - Mini Enciclopedia de Salud">
+  <title>Declaración de Accesibilidad – CuidaMedPlus</title>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#declaracion" class="skip-link">Saltar a la declaración de accesibilidad</a>
+
+    <header>
+        <h1>Declaración de Accesibilidad</h1>
+        <nav aria-label="Migas de pan">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Inicio</a></li>
+                <li>Accesibilidad</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="declaracion" class="declaracion-accesibilidad">
+            <div class="container">
+
+                <h2>Declaración de Accesibilidad</h2>
+
+                <p>
+                    <strong>CuidaMedPlus</strong> se compromete a hacer accesible su sitio web de conformidad con el 
+                    Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones móviles del sector público.
+                </p>
+
+                <p>
+                    Esta declaración de accesibilidad se aplica al sitio web:
+                    <br>
+                    <strong>https://rocioymaya.github.io/CuidaMedPlus/index.html</strong>
+                </p>
+
+                <!-- SITUACIÓN -->
+                <article class="accesibilidad-item">
+                    <h3>Situación de cumplimiento</h3>
+                    <div class="estado-cumplimiento conBorde exito">
+                        <p>
+                            Este sitio web es <strong>parcialmente conforme</strong> con el RD 1112/2018 debido a la falta de conformidad en algunos aspectos que se detallan a continuación.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- CONTENIDO NO ACCESIBLE -->
+                <article class="accesibilidad-item">
+                    <h3>Contenido no accesible</h3>
+                    <p>El contenido que se indica a continuación no es accesible por los siguientes motivos:</p>
+
+                    <div class="contenido-no-accesible conBorde advertencia">
+                        
+                        <h4>a) Falta de conformidad con el RD 1112/2018</h4>
+                        <ul>
+                            <li>Algunas imágenes podrían carecer de un texto alternativo adecuado (<code>alt</code>).</li>
+                            <li>Algunos <code>iframe</code> incluidos (como el del blog) carecen de atributo <code>title</code>.</li>
+                            <li>Determinadas tablas informativas no incluyen <code>caption</code> descriptivo.</li>
+                            <li>Algunas páginas antiguas pueden no seguir completamente la jerarquía de encabezados.</li>
+                        </ul>
+
+                        <h4>b) Carga desproporcionada</h4>
+                        <ul>
+                            <li>No aplica.</li>
+                        </ul>
+
+                        <h4>c) El contenido no entra en el ámbito de la legislación aplicable</h4>
+                        <ul>
+                            <li>Los mapas interactivos incluidos en la carpeta <strong>P3/mapas</strong> no siempre permiten una descripción textual completa.</li>
+                            <li>Contenidos de terceros incrustados mediante iframes.</li>
+                            <li>Archivos ofimáticos externos o PDF que no hayan sido generados siguiendo criterios de accesibilidad.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- PREPARACIÓN -->
+                <article class="accesibilidad-item">
+                    <h3>Preparación de la presente declaración de accesibilidad</h3>
+
+                    <p>
+                        La presente declaración fue preparada el 
+                        <time datetime="2025-11-27">27 de noviembre de 2025</time>.
+                    </p>
+                    <p>
+                        El método utilizado para preparar la declaración ha sido una 
+                        <strong>autoevaluación</strong> realizada por la autora del proyecto siguiendo el modelo establecido en la Decisión de Ejecución (UE) 2018/1523.
+                    </p>
+                    <p>
+                        Última revisión de la declaración:
+                        <time datetime="2025-11-27">27 de noviembre de 2025</time>.
+                    </p>
+                </article>
+
+                <!-- CONTACTO -->
+                <article class="accesibilidad-item">
+                    <h3>Observaciones y datos de contacto</h3>
+                    <p>
+                        Puede realizar comunicaciones sobre requisitos de accesibilidad (art. 10.2.a del RD 1112/2018), 
+                        como por ejemplo:
+                    </p>
+                    <ul>
+                        <li>Informar sobre posibles incumplimientos.</li>
+                        <li>Transmitir otras dificultades de acceso.</li>
+                        <li>Formular consultas o sugerencias de mejora relacionadas con la accesibilidad del sitio.</li>
+                    </ul>
+
+                    <div class="contacto-accesibilidad conBorde">
+                        <p>Correo de contacto:</p>
+                        <p><a href="mailto:contacto.cuidamedplus@gmail.com">contacto.cuidamedplus@gmail.com</a></p>
+                    </div>
+                </article>
+
+                <!-- PROCEDIMIENTO -->
+                <article class="accesibilidad-item">
+                    <h3>Procedimiento de aplicación</h3>
+                    <p>
+                        Si una solicitud de información accesible o una queja no fueran atendidas satisfactoriamente,
+                        la persona interesada podrá presentar una reclamación conforme al Artículo 13 del RD 1112/2018.
+                    </p>
+
+                    <p>
+                        Dentro del contexto académico de esta práctica, se referencia como ejemplo el siguiente enlace
+                        al Registro Electrónico Común:
+                    </p>
+
+                    <p>
+                        <a href="https://rec.redsara.es/registro/action/are/acceso.do" target="_blank">
+                            Acceso al Procedimiento de Reclamación – Registro Electrónico Común
+                        </a>
+                    </p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-links">
+            <a href="accesibilidad.html">Accesibilidad</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <p><small>&copy; 2025 CuidaMedPlus</small></p>
+        <address>
+            <p>Correo: <a href="mailto:contacto.cuidamedplus@gmail.com">contacto.cuidamedplus@gmail.com</a></p>
+        </address>
+    </footer>
+</body>
+</html>
